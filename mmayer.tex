@@ -1,0 +1,358 @@
+%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.1.5, 1 December 2018) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,letter,ragged2e]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=2cm,right=10cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Carlito}
+\else
+  % If using pdflatex:
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{000000}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{2E2E2E}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+\definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
+\definecolor{azure}{rgb}{0.0, 0.5, 1.0}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Seungmin Woo}
+% \tagline{Computer Science Undergraduate}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+%\photo{3.3cm}{profile.jpg}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{smwoo@gatech.edu}
+  \phone{+1 (470) 905-7898}
+  % \mailaddress{494 Lynch NW, Atlanta GA, USA}
+  \location{Atlanta, GA, USA}
+  \googlescholar{\href{https://scholar.google.com/citations?user=_VD-u3YAAAAJ&hl=en&oi=ao}{Google Scholar}}
+  \homepage{\href{https://sites.google.com/view/aseungminwoo/home}{Personal Website}}
+%  \twitter{@marissamayer}
+  %\linkedin{\href{linkedin.com/in/aseungminwoo}{LinkedIn}}
+   % \github{https://github.com/AnmolMittal98} % I'm just making this up though.
+%   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[page1sidebar]{EDUCATION}
+\cvevent{Ph.D. in Electrical and Computer Engineering}{Georgia Institute of Technology}{08/2023 - Present}{Atlanta, USA}
+\begin{itemize}
+    \item Advisor: Professor Muhannad S. Bakir
+    \item CGPA: 3.88/4.0
+\end{itemize}
+
+\vspace{-5pt}
+\divider
+\vspace{-2.5pt}
+
+% \begin{itemize}
+%     \item Aggregate Percentage: 82.5\%
+% \end{itemize}
+% \divider
+
+%\cvevent{M.Eng. in Microelectronics and \\
+%Embedded Systems}{Asian Institute of
+%Technology}{08/2015 - 05/2017}{Pathumthani, Thailand}
+% \begin{itemize}
+%     \item Class XII Aggregate Percentage: 93.2\%
+%     \item Class X Cum.GPA: 9.2/10
+% \end{itemize}
+
+\cvevent{B.S. in Electronics Engineering}{Kyungpook National University}{03/2017 - 08/2023}{Daegu, South Korea}
+
+\begin{itemize}
+    \item Advisor: Professor Taigon Song
+    \item CGPA: 4.11/4.3 (Major GPA: 4.26/4.3)
+    \item Summa Cum Laude (Second Place)
+\end{itemize}
+
+
+%\divider
+
+%\vspace{5pt}
+
+
+%%%%%%%%
+
+\cvsection{CONFERENCE PUBLICATIONS (selected)}
+%\smallskip
+\begin{itemize}
+    \item \textbf{Seungmin Woo} et al., "\textbf{Design Space Exploration of Chiplet and Interposer PDNs for 2.5D AI Systems}," IEEE Electronic Components and Technology Conference (ECTC), 2026 (accepted)
+    \item Taehoon Kim, \textbf{Seungmin Woo} et al., "\textbf{Integrated IR-Drop Analysis Framework for PDNs in 3D Stacked Dies}," IEEE Electronic Components and Technology Conference (ECTC), 2026 (accepted)
+    \item Taesoo Kim, \textbf{Seungmin Woo} et al., "\textbf{A Design-Space Exploration of Active Interposer Architectures for Long-Reach Signaling in Large-Area Advanced Packages}," IEEE Electronic Components and Technology Conference (ECTC), 2026 (accepted)
+    \item Amaan Rahman, \textbf{Seungmin Woo} et al., “\textbf{On-chip Integrated Voltage Regulators: Frontside, Backside, or Off-Chip?},” IEEE/ACM International Symposium on Low Power Electronics and Design (ISLPED), 2025 (\href{https://doi.org/10.1109/ISLPED65674.2025.11261800}{link})
+    \item \textbf{Seungmin Woo} et al., “\textbf{AI-Driven Evaluation and Optimization of Bump Pitch Effects on Chiplet and Interposer Design Quality},” IEEE/ACM International Conference on Computer-Aided Design (ICCAD), 2024 (\href{https://doi.org/10.1145/3676536.3676817}{link})
+    \item \textbf{Seungmin Woo} et al., "\textbf{Reinforcement Learning-Based Optimization of Back-side Power Delivery Networks in VLSI Design for IR-drop Reduction}," IEEE/ACM Design, Automation and Test in Europe Conference (DATE), 2024 (\href{https://doi.org/10.23919/DATE58400.2024.10546599}{link})
+    %\item Taehak Kim, Jaehoon Jeong, \textbf{Seungmin Woo} et al., "\textbf{NS3K: A 3nm Nanosheet FET Library for VLSI Prediction in Advanced Nodes}," IEEE International Symposium on Circuits \& Systems (ISCAS), 2021 (\href{https://doi.org/10.1109/ISCAS51556.2021.9401055}{link})
+%\smallskip
+\end{itemize}
+
+\cvsection{JOURNAL PUBLICATIONS}
+%\smallskip
+\begin{itemize}
+    \item Jonti Talukdar, \textbf{Seungmin Woo}, et al., "\textbf{Dynamic Interposer Obfuscation through Distributed Scramblers in Heterogeneously Integrated 2.5D ICs}," IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), 2025 (\href{https://doi.org/10.1109/TCAD.2025.3580649}{link})
+    \item Pruek Vanna-iampikul, \textbf{Seungmin Woo} et al., “\textbf{Glass Interposer Integration of Logic and Memory Chiplets: PPA and Power/Signal Integrity Benefits},” IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), 2024 (\href{https://doi.org/10.1109/TCAD.2024.3504361}{link})
+    \item Taehak Kim, Jaehoon Jeong, \textbf{Seungmin Woo} et al., “\textbf{NS3K: A 3 nm Nanosheet FET Standard Cell Library Development and Its Impact},” IEEE Transactions on Very Large Scale Integration Systems (TVLSI), 2022 (\href{https://doi.org/10.1109/TVLSI.2022.3229442}{link})
+%\smallskip
+\end{itemize}
+
+
+
+
+%%%%%%%%
+
+
+%\vspace{200pt}
+%\cvsection[page2sidebar]{PUBLICATIONS CONT.}
+%\begin{itemize}
+
+%\item Hao-Hsiang Hsiao, Yi-Chen Lu, \textbf{Pruek Vanna-Iampikul}, and Sung Kyu Lim, \textbf{FastTuner: Transferable Physical Design Parameter Optimization using Fast Reinforcement Learning}, ACM International Symposium on Physical Design, 2024
+
+%\item Hao-Hsiang Hsiao, \textbf{Pruek Vanna-iampikul}, Yi-Chen Lu, and Sung Kyu Lim, \textbf{ML-based Physical Design Parameter Optimization for 3D ICs: From Parameter Selection to Optimization}", ACM Design Automation Conference, 2024.
+
+%\item Nesara Eranna Bethur, \textbf{Pruek Vanna-iampikul}, Odysseas Zografos, Lingjun Zhu, Giuliano Sisto, Dragomir Milojevic, Alberto Garcia-Ortiz, Geert Hellings, Julien Ryckaert, Francky Catthoor, and Sung Kyu Lim, \textbf{GNN-assisted Back-side Clock Routing Methodology for Advance Technologies}, ACM Design Automation Conference, 2024.
+
+%\item Boxun Xu, Junyoung Hwang, \textbf{Pruek Vanna-iampikul}, Sung Kyu Lim, and Peng Li, \textbf{Spiking Transformer Hardware Accelerators in 3D Integration}, IEEE/ACM International Conference on Computer-Aided Design, 2024
+
+%\item Seungmin Woo, \textbf{Pruek Vanna-iampikul}, and Sung Kyu Lim, \textbf{AI-Driven Evaluation and Optimization of Bump Pitch Effects on Chiplet and Interposer Design Quality}, IEEE/ACM International Conference on Computer-Aided Design, 2024
+%\end{itemize}
+
+\vspace{100pt}
+
+
+\cvsection[page2sidebar]{Research Projects}
+
+\cvevent{Samsung Electronics}{Power Delivery Network Design Space Exploration for 2.5D/3D}{08/2025 -- Present}{Atlanta, GA, USA}
+\begin{itemize}
+    \item Design space exploration on PDN design parameters in 2.5D/3D. 
+    \item Chiplet/interposer PDN co-optimization to ensure both PPA and power integrity
+\end{itemize}
+
+\vspace{-5pt}
+\divider
+\vspace{-2.5pt}
+
+\cvevent{Siemens, Thrace Systems: OCP CDX}{2.5D/3D Design Kit Standardization and Demo Workflow}{01/2024 -- Present}{Atlanta, GA, USA}
+\begin{itemize}
+    \item Design kit standard for 2.5D/3D heterogeneous integration.
+    \item Open-sourced chiplet/interposer demo workflow. 
+\end{itemize}
+
+\vspace{-5pt}
+\divider
+\vspace{-2.5pt}
+
+\cvevent{Semiconductor Research Center: Jump 2.0 CHIMES}{Heterogeneous Integration of Micro Electronic Systems}{01/2024 -- 05/2025}{Atlanta, GA, USA}
+\begin{itemize}
+    \item Sensitivity analysis for 2.5D design parameters.
+    \item AI-driven prediction and optimization methodology for 2.5D.
+\end{itemize}
+
+\vspace{-5pt}
+\divider
+\vspace{-2.5pt}
+
+\cvevent{Meta / Packaging Research Center (PRC - Georgia Tech)}{Glass Interposer Integration and PPA Benefits}{08/2023 -- 01/2024}{Atlanta, GA, USA}
+\begin{itemize}
+    \item Design 5.5D ICs using glass interposer with chiplets.
+    \item Analyze the trade-off in terms of Power Performance and Area (PPA), Signal/Power/Thermal Integrity.
+\end{itemize}
+
+\vspace{-5pt}
+\divider
+\vspace{-5pt}
+
+\cvevent{National Research Foundation, Samsung Electronics}{Emerging Technologies in Advanced Technology Node}{09/2019 -- 08/2023}{Daegu, South Korea}
+\begin{itemize}
+    \item Develop 5nm/3nm process design kit (for the first in academia).
+    \item Reinforcement learning-based back-side PDN optimization.
+\end{itemize}
+
+\vspace{5pt}
+
+\cvsection{Professional Services}
+\cvproject{Reviewer}
+\begin{itemize}
+    \item IEEE Transactions on Computer Aided Design of Integrated Circuits and Systems (TCAD), 2025 -- Present
+    \end{itemize}
+\cvproject{Invited Talk}
+\begin{itemize}
+    \item \textbf{Seungmin Woo} et al., “\textbf{CDX Innovations in Chiplet Design: From Standardization to System Realization},” OCP Global Summit, 2025
+    \item \textbf{Seungmin Woo}, “\textbf{Optimizing chiplet and interposer design through AI-driven sensitivity analysis},” 26th ACM/IEEE International Workshop on System-Level Interconnect Pathfinding (SLIP), 2024
+\end{itemize}
+
+
+%\cvevent{Graduate Research Assistant}{I3DS Lab: Professor Mohannad S. Bakir}{05/2025 - Present}{ Atlanta, Georgia}
+%\cvproject{3D Physical Design Flow for High-performance 3D IC}
+%\begin{itemize}
+%    \item A novel physical design flow to mitigate the performance degradation from cell displacement \& negligible 3D routing overhead.
+%    \item Support heterogeneous 3D ICs where different techniques are used in different dies.
+%\end{itemize}
+
+%\vspace{100pt}
+
+%\cvsection{RESEARCH EXPERIENCES (CONT)}
+%\cvevent{Master Thesis}{MES Lab: Dr. Mongkol}{08/2016 - 05/2017}{ Portugal \& Bangkok}
+%\begin{itemize}
+%    \item Designed and implemented the Automatic Vehicular Accident Detection and Notification with accident
+%video. 
+%    \item The proposed system automatically detects the accident and notifies the accident information,
+%including the location, short accident videos, accident type, and occupant number from the thermal
+%camera to the web user interface. 
+%    \item This information assists the rescue team in preparing and easily
+%knowing the exact location of the accident.
+%\end{itemize}
+
+%\divider
+
+%\cvevent{Capstone Project}{Hardware Lab: Dr. Charoen Vongchumyen}{06/2011 - 05/2012}{ Bangkok, Thailand}
+%\begin{itemize}
+%    \item Designed and implemented the IPSC Training System, the assistive system helping users train the
+%IPSC shooting with full control of all the shooting targets via the Zigbee network controlled by the
+%FriendlyARM Development Board.
+%    \item The system accommodates the training process with the capability to customize the training field and provide real-time scoring.
+%\end{itemize}
+
+
+
+
+
+
+
+
+%%%%%%%%%%
+
+
+
+
+
+%\smallskip
+% \begin{itemize}
+% \item Machine Learning by Andrew Ng (Stanford University and Coursera) (11 Weeks). 
+% \item Data Structures and Algorithms in Java (Coding Blocks).
+% \item Ethical Hacking Workshop at IIT-Delhi in association with Kyrion Technologies.
+% \end{itemize}
+
+
+% \cvsection{leadership / volunteership }
+% %\smallskip
+% \begin{itemize}
+% \item Volunteer at Society For Promotion Of Youth And Masses (SPYM), an NGO working in the area of community mobilization, health care. (7 Months) 
+% \item Organised an Android Workshop (CSE Department and Coding Blocks).
+% \item Organized a CodeSprint in college (Coding Blocks).
+% \item Intern at Leaders for Tomorrow (LFT), a not-for-profit youth leadership organisation. (1.5 Months)
+% \item Organized an event Code-a-thon (2.0) in college (HackerEarth).
+% \item Coordinator at Blood Donation Drive (Rotary Club).
+% \end{itemize}
+
+%\divider
+
+
+
+% \cvevent{Product Engineer}{Google}{23 June 1999 -- 2001}{Palo Alto, CA}
+
+% \begin{itemize}
+% \item Joined the company as employe \#20 and female employee \#1
+% \item Developed targeted advertisement in order to use user's search queries and show them related ads
+% \end{itemize}
+
+%\cvsection{A Day of My Life}
+
+% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% \wheelchart{outer radius}{inner radius}{
+% comma-separated list of value/text width/color/detail}
+% Some ad-hoc tweaking to adjust the labels so that they don't overlap
+% \wheelchart{1.5cm}{0.5cm}{%
+%   10/10em/accent!30/Sleeping \& dreaming about work,
+%   25/9em/accent!60/Public resolving issues with Yahoo!\ investors,
+%   5/13em/accent!10/\footnotesize\\[1ex]New York \& San Francisco Ballet Jawbone board member,
+%   20/15em/accent!40/Spending time with family,
+%   5/8em/accent!20/\footnotesize Business development for Yahoo!\ after the Verizon acquisition,
+%   30/9em/accent/Showing Yahoo!\ employees that their work has meaning,
+%   5/8em/accent!20/Baking cupcakes
+% }
+
+\clearpage
+
+% \cvsection[page2sidebar]{Publications}
+
+\nocite{*}
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+
+% \divider
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{Journal Articles}}, type=article]
+
+% \divider
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faGroup}{Conference Proceedings}},type=inproceedings]
+
+% %% If the NEXT page doesn't start with a \cvsection but you'd
+% %% still like to add a sidebar, then use this command on THIS
+% %% page to add it. The optional argument lets you pull up the
+% %% sidebar a bit so that it looks aligned with the top of the
+% %% main column.
+% % \addnextpagesidebar[-1ex]{page3sidebar}
+
+
+\end{document}
