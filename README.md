@@ -13,6 +13,7 @@ Edited on Overleaf and mirrored to GitHub.
 │   ├── sidebar-page1.tex       # Page 1 sidebar: technical focus, experience, awards
 │   └── sidebar-page2.tex       # Page 2 sidebar: skills, coursework
 ├── altacv.cls                  # AltaCV class file (LPPL 1.3)
+├── .latexmkrc                  # latexmk config (pdflatex, output to build/)
 └── .gitignore
 ```
 
@@ -20,6 +21,13 @@ Sidebars are attached to a section with the optional argument of `\cvsection`,
 e.g. `\cvsection[sections/sidebar-page1]{EDUCATION}`.
 
 ## Build
+
+```sh
+latexmk            # writes build/main.pdf (see .latexmkrc)
+latexmk -C         # clean
+```
+
+Or by hand:
 
 ```sh
 pdflatex main.tex
