@@ -1,0 +1,25 @@
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.synctex(busy)
+*.toc
+*.xdv
+*.nav
+*.snm
+*.vrb
+
+# Compiled output (keep the repo source-only; attach the PDF to releases if needed)
+*.pdf
+
+# Editors / OS
+.DS_Store
+.vscode/
+*.swp

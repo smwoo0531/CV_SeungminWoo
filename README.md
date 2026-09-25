@@ -1,34 +1,37 @@
-# AltaCV, yet another LaTeX CV/Résumé class
+# CV — Seungmin Woo
 
-v1.1.5 (1 December 2018), by LianTze Lim (liantze@gmail.com)
+LaTeX source for my curriculum vitae, built on the
+[AltaCV](https://github.com/liantze/AltaCV) class (v1.1.5) by LianTze Lim.
+Edited on Overleaf and mirrored to GitHub.
 
-(Thanks to [Nur](https://github.com/nurh) for the name.)
+## Structure
 
-It all started with this:
+```
+.
+├── main.tex                    # Entry point: header, education, publications, projects, services
+├── sections/
+│   ├── sidebar-page1.tex       # Page 1 sidebar: technical focus, experience, awards
+│   └── sidebar-page2.tex       # Page 2 sidebar: skills, coursework
+├── altacv.cls                  # AltaCV class file (LPPL 1.3)
+└── .gitignore
+```
 
-[<img src="tweet-that-started-this.png" width="500px">](https://twitter.com/Leonduck/status/764281546408923136)
+Sidebars are attached to a section with the optional argument of `\cvsection`,
+e.g. `\cvsection[sections/sidebar-page1]{EDUCATION}`.
 
-Leonardo was talking about a [résumé of Marissa Mayer that Business Insider put together](http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/) using [enhancv.com](https://enhancv.com).
-I _knew_ I had to do something about it. And so AltaCV was born.
+## Build
 
-## Samples
+```sh
+pdflatex main.tex
+pdflatex main.tex   # second pass for cross-references
+```
 
-This is how the re-created résumé looks like ([view/open on Overleaf](https://www.overleaf.com/latex/examples/recreating-business-insiders-cv-of-marissa-mayer-using-altacv/gtqfpbwncfvp)):
+XeLaTeX and LuaLaTeX also work (Carlito font is used under those engines,
+Lato under pdflatex). No bibliography step is needed; publications are typed
+inline.
 
-<img src="mmayer.png" alt="Marissa Mayer's résumé, re-created with AltaCV" width="600px">
+## Notes
 
-Though if you're creating your own CV/résumé, you'd probably prefer using the basic template ([view/open on Overleaf](https://www.overleaf.com/latex/templates/altacv-template/trgqjpwnmtgv)):
-
-<img src="sample.png" alt="sample barebones AltaCV template" width="600px">
-
-
-## Requirements and Compilation
-
-* pdflatex + biber + pdflatex
-* AltaCV uses [`fontawesome`](http://www.ctan.org/pkg/fontawesome) and [`academicons`](http://www.ctan.org/pkg/academicons); they're included in both TeX Live 2016 and MikTeX 2.9.
-* Loading `academicons` is optional: enable it by adding the `academicons` option to `\documentclass`.
-* Use the `normalphoto` option to get a normal (i.e. non-circular) photo.
-* Use the `ragged2d` option to activate hyphenations while keeping text left-justified; line endings will thus be less jagged and more aesthetically pleasing.
-* Can now be compiled with pdflatex, XeLaTeX and LuaLaTeX!
-* However if you're using `academicons`, you _must_ use either XeLaTeX or LuaLaTeX. If the doc then compiles but the icons don't show up in the output PDF, try compiling with LuaLaTeX instead.
-* The samples here use the [Lato](http://www.latofonts.com/lato-free-fonts/) font.
+- Set `main.tex` as the main document in Overleaf if it does not auto-detect.
+- `altacv.cls` requires `fontawesome`; `academicons` is only needed if the
+  `academicons` class option is enabled.
